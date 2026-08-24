@@ -1,0 +1,128 @@
+// prisma/schema.prisma (Root Schema for Antideploy & Cloud Deployments)
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  CUSTOMER
+  EMPLOYEE
+  ADMIN
+  OWNER
+}
+
+enum AccountStatus {
+  PENDING_APPROVAL
+  ACTIVE
+  REJECTED
+  PENDING_DELETION
+}
+
+enum OrderStatus {
+  PENDING
+  IN_PROCESS
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+model User {
+  id               String        @id @default(uuid())
+  name             String?
+  phoneNumber      String?       @unique
+  email            String?       @unique
+  passwordHash     String?
+  role             Role          @default(CUSTOMER)
+  accountStatus    AccountStatus @default(ACTIVE)
+  
+  // Granular Employee Permission Flags
+  canManageCatalog Boolean       @default(false)
+  canViewRevenue   Boolean       @default(false)
+  canManageOrders  Boolean       @default(false)
+
+  orders           Order[]
+  stockLogs        StockLedger[]
+  
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  @@map("users")
+}
+
+model Product {
+  id            String        @id @default(uuid())
+  name          String
+  collection    String        @default("Banarasi Heritage")
+  fabric        String
+  price         Decimal       @db.Decimal(10, 2)
+  originalPrice Decimal?      @db.Decimal(10, 2)
+  tag           String        @default("New Arrival")
+  hue           String        @default("#6B1E2E")
+  image         String?
+  origin        String        @default("Varanasi, Uttar Pradesh")
+  weaveTime     String        @default("14 Days Handloom")
+  silkMark      Boolean       @default(true)
+  stock         Int           @default(10)
+  description   String?
+  isBestseller  Boolean       @default(false)
+
+  stockLogs     StockLedger[]
+  orderItems    OrderItem[]
+
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  @@map("products")
+}
+
+model StockLedger {
+  id            String   @id @default(uuid())
+  productId     String
+  product       Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  previousStock Int
+  newStock      Int
+  change        Int
+  reason        String   @default("Inventory Adjustment")
+  updatedById   String?
+  updatedBy     User?    @relation(fields: [updatedById], references: [id], onDelete: SetNull)
+
+  createdAt     DateTime @default(now())
+
+  @@map("stock_ledgers")
+}
+
+model Order {
+  id              String      @id @default(uuid())
+  userId          String
+  user            User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  totalAmount     Decimal     @db.Decimal(10, 2)
+  status          OrderStatus @default(PENDING)
+  paymentMethod   String      @default("UPI / WhatsApp")
+  shippingAddress String?
+  trackingNumber  String?
+
+  items           OrderItem[]
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id        String   @id @default(uuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Restrict)
+  name      String
+  quantity  Int
+  unitPrice Decimal  @db.Decimal(10, 2)
+
+  @@map("order_items")
+}
