@@ -1,0 +1,183 @@
+:root {
+  --primary: #7A1C2E;
+  --primary-deep: #5C1220;
+  --secondary: #C8A96E;
+  --secondary-light: #E8D5A3;
+  --surface-ivory: #FAF8F5;
+  --surface-cream: #F4EFEA;
+  --surface-blush: #E8C4B8;
+  --charcoal: #2C2420;
+  --charcoal-muted: #7C6E66;
+  --brandBorder: rgba(200, 169, 110, 0.25);
+  --brandBorderStrong: rgba(200, 169, 110, 0.5);
+  --card-bg: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--surface-ivory);
+  color: var(--charcoal);
+  font-family: 'Montserrat', 'Jost', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 169, 110, 0.4);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(122, 28, 46, 0.7);
+}
+
+/* Luxury Interactive Buttons */
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+.luxury-btn-primary {
+  background: var(--primary);
+  color: var(--surface-ivory);
+  border: 1px solid var(--primary-deep);
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(122, 28, 46, 0.2);
+}
+
+.luxury-btn-primary:hover {
+  background: var(--primary-deep);
+  box-shadow: 0 6px 16px rgba(122, 28, 46, 0.35);
+  transform: translateY(-1px);
+}
+
+.luxury-btn-secondary {
+  background: var(--surface-cream);
+  color: var(--charcoal);
+  border: 1px solid var(--brandBorderStrong);
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.luxury-btn-secondary:hover {
+  background: var(--secondary-light);
+  border-color: var(--secondary);
+}
+
+/* Luxury Cards */
+.luxury-card {
+  background: #FFFFFF;
+  border: 1px solid var(--brandBorder);
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(44, 36, 32, 0.04);
+  border-radius: 2px;
+  position: relative;
+  transition: box-shadow 0.25s ease;
+}
+
+.luxury-card:hover {
+  box-shadow: 0 8px 30px rgba(44, 36, 32, 0.08);
+}
+
+/* Tables */
+.luxury-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #FFFFFF;
+  border: 1px solid var(--brandBorder);
+}
+
+.luxury-table th {
+  background: var(--surface-cream);
+  color: var(--charcoal);
+  font-family: 'Montserrat', 'Jost', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--brandBorder);
+}
+
+.luxury-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(200, 169, 110, 0.15);
+  font-size: 12px;
+  color: var(--charcoal);
+}
+
+.luxury-table tr:hover td {
+  background: #FCFAF7;
+}
+
+/* Luxury Role Badges */
+.badge-owner {
+  background: linear-gradient(135deg, #7A1C2E, #5C1220);
+  color: #FAF8F5;
+  border: 1px solid #C8A96E;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.badge-admin {
+  background: #2C2420;
+  color: #E8D5A3;
+  border: 1px solid #C8A96E;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.badge-employee {
+  background: var(--surface-cream);
+  color: var(--primary);
+  border: 1px solid rgba(122, 28, 46, 0.3);
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}

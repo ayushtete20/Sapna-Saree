@@ -1,0 +1,18 @@
+{
+  "name": "sapna-sarees-dashboard",
+  "version": "1.0.0",
+  "description": "Sapna Sarees Internal Admin & Owner Portal",
+  "scripts": {
+    "start": "vite --port 5000",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.3.1"
+  }
+}

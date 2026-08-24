@@ -1,0 +1,52 @@
+/* ============================================================
+   DESIGN TOKENS — Exact match from Sapna Sarees.html
+   ============================================================ */
+:root {
+  --ivory:      #FAF6F0;
+  --cream:      #F3EDE3;
+  --gold:       #C8A96E;
+  --gold-light: #E8D5A3;
+  --blush:      #E8C4B8;
+  --maroon:     #7A1C2E;
+  --maroon-deep:#5C1220;
+  --charcoal:   #2C2420;
+  --warm-gray:  #8C7B72;
+  --white:      #FFFFFF;
+  --border:     rgba(200,169,110,0.25);
+
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Jost', system-ui, sans-serif;
+  --script:'Dancing Script', cursive;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Legacy aliases for backward compat */
+  --c-bg: var(--ivory);
+  --c-bg-deep: var(--cream);
+  --c-ink: var(--charcoal);
+  --c-gold: var(--gold);
+  --c-maroon: var(--maroon);
+  --c-line: var(--border);
+  --c-white: var(--white);
+  --font-serif: var(--serif);
+  --font-sans: var(--sans);
+  --font-script: var(--script);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }

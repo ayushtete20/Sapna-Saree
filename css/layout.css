@@ -1,0 +1,93 @@
+/* ============================================================
+   LAYOUT — sapna-sarees/css/layout.css
+   ============================================================ */
+body {
+  font-family: var(--font-sans);
+  background: var(--c-bg);
+  color: var(--c-ink);
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+.container--narrow {
+  max-width: var(--max-w-narrow);
+}
+
+/* Section defaults */
+.section {
+  padding-block: var(--section-py);
+}
+.section--bg   { background: var(--c-bg-deep); }
+.section--dark { background: var(--c-ink); }
+
+/* Section header patterns */
+.section-header { margin-bottom: var(--sp-16); }
+.section-header--split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--sp-8);
+}
+.section-header--center { text-align: center; }
+.section-footer { text-align: center; margin-top: var(--sp-16); }
+
+/* Typography utilities */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: var(--sp-5);
+  font-weight: 500;
+}
+.eyebrow--light { color: var(--c-gold-pale); }
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  color: var(--c-ink);
+  line-height: 1.18;
+}
+.section-title--light { color: var(--c-white); }
+
+.body-text {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--c-ink);
+}
+.body-text--muted { color: var(--c-ink-light); }
+.body-text--light { color: rgba(255,255,255,0.65); margin-top: var(--sp-5); }
+
+/* Gold hairline rule */
+.gold-rule {
+  width: 2.5rem;
+  height: 1px;
+  background: var(--c-gold);
+  margin-top: var(--sp-6);
+}
+.gold-rule--center { margin-inline: auto; margin-block: var(--sp-6); }
+
+/* Link with arrow */
+.link-arrow {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--c-ink-light);
+  text-decoration: none;
+  border-bottom: 1px solid var(--c-line);
+  padding-bottom: 2px;
+  white-space: nowrap;
+  transition: color var(--dur-base) var(--ease), border-color var(--dur-base) var(--ease);
+}
+.link-arrow:hover { color: var(--c-ink); border-color: var(--c-ink); }

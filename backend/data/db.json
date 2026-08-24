@@ -1,0 +1,220 @@
+{
+  "users": [
+    {
+      "id": "u_user_1",
+      "name": "Radhika Sharma",
+      "email": "user@sapnasarees.com",
+      "password": "user123",
+      "role": "user",
+      "phone": "+91 98765 00001",
+      "createdAt": "2026-01-15T10:00:00.000Z"
+    },
+    {
+      "id": "u_admin_1",
+      "name": "Aarav Gupta (Manager)",
+      "email": "admin@sapnasarees.com",
+      "password": "admin123",
+      "role": "admin",
+      "phone": "+91 98765 00002",
+      "createdAt": "2026-01-10T10:00:00.000Z"
+    },
+    {
+      "id": "u_owner_1",
+      "name": "Lavichitra (Founder & Owner)",
+      "email": "owner@sapnasarees.com",
+      "password": "owner123",
+      "role": "owner",
+      "phone": "+91 98765 00003",
+      "createdAt": "2026-01-01T10:00:00.000Z"
+    }
+  ],
+  "sarees": [
+    {
+      "id": "saree_1",
+      "name": "Crimson Zari Banarasi",
+      "collection": "Banarasi Heritage",
+      "fabric": "Pure Katan Silk · Varanasi",
+      "price": 18500,
+      "originalPrice": 24000,
+      "tag": "Bestseller",
+      "hue": "#6B1E2E",
+      "image": "/images/banarasi_red.png",
+      "origin": "Varanasi, Uttar Pradesh",
+      "weaveTime": "22 Days Handloom",
+      "silkMark": true,
+      "stock": 12,
+      "description": "Handcrafted crimson red Katan silk Banarasi saree featuring rich gold zari Kadwa floral motifs."
+    },
+    {
+      "id": "saree_2",
+      "name": "Ivory Kanjivaram Bridal",
+      "collection": "Pure Kanjivaram Silk",
+      "fabric": "Kanchipuram Mulberry Silk",
+      "price": 32000,
+      "originalPrice": 39500,
+      "tag": "New Arrival",
+      "hue": "#C8B89A",
+      "image": "/images/kanjivaram_ivory.png",
+      "origin": "Kanchipuram, Tamil Nadu",
+      "weaveTime": "30 Days Korvai Weave",
+      "silkMark": true,
+      "stock": 5,
+      "description": "Heavy 3-ply mulberry silk Ivory Kanjivaram saree with temple Korvai border in real silver-gold zari."
+    },
+    {
+      "id": "saree_3",
+      "name": "Royal Indigo Chanderi",
+      "collection": "Festive Splendour",
+      "fabric": "Chanderi Cotton Silk · MP",
+      "price": 8900,
+      "originalPrice": 12000,
+      "tag": "Limited",
+      "hue": "#1A2E5C",
+      "image": "/images/chanderi_indigo.png",
+      "origin": "Chanderi, Madhya Pradesh",
+      "weaveTime": "12 Days Handloom",
+      "silkMark": true,
+      "stock": 18,
+      "description": "Lightweight Deep Indigo Chanderi saree with hand-woven silver zari bootis."
+    },
+    {
+      "id": "saree_4",
+      "name": "Dusty Rose Tissue Silk",
+      "collection": "Designer Edit",
+      "fabric": "Gilded Tissue Silk",
+      "price": 14200,
+      "originalPrice": 18000,
+      "tag": "Trending",
+      "hue": "#9C5870",
+      "image": "/images/tissue_pink.png",
+      "origin": "Varanasi Atelier",
+      "weaveTime": "16 Days Handloom",
+      "silkMark": true,
+      "stock": 8,
+      "description": "Dusty Rose Tissue Silk saree shining with metallic golden threads interwoven into the warp."
+    },
+    {
+      "id": "saree_1787460605588",
+      "name": "Emerald Green Katan Silk Banarasi",
+      "collection": "Banarasi Heritage",
+      "fabric": "100% Pure Katan Silk · Varanasi Master Loom",
+      "price": 26500,
+      "originalPrice": 34000,
+      "tag": "Exclusive Atelier",
+      "hue": "#0F5132",
+      "image": "/images/banarasi_red.png",
+      "origin": "Varanasi Atelier",
+      "weaveTime": "28 Days Kadwa Handloom",
+      "silkMark": true,
+      "stock": 7,
+      "description": "Exquisite royal emerald green Katan silk saree handwoven with gold and silver zari floral jall.",
+      "createdBy": {
+        "id": "staff_admin_1",
+        "name": "Aarav Gupta",
+        "email": "admin@sapnasarees.com",
+        "role": "ADMIN",
+        "timestamp": "2026-08-23T04:50:05.588Z"
+      },
+      "updatedBy": {
+        "id": "staff_admin_1",
+        "name": "Aarav Gupta",
+        "email": "admin@sapnasarees.com",
+        "role": "ADMIN",
+        "timestamp": "2026-08-23T04:50:05.588Z"
+      },
+      "auditLog": [
+        {
+          "action": "CREATED",
+          "updatedBy": {
+            "id": "staff_admin_1",
+            "name": "Aarav Gupta",
+            "email": "admin@sapnasarees.com",
+            "role": "ADMIN"
+          },
+          "timestamp": "2026-08-23T04:50:05.588Z",
+          "details": "Saree 'Emerald Green Katan Silk Banarasi' added to catalog with stock 7 and price ₹26500."
+        }
+      ],
+      "inventoryLog": [
+        {
+          "previousStock": 0,
+          "newStock": 7,
+          "change": 7,
+          "updatedBy": {
+            "id": "staff_admin_1",
+            "name": "Aarav Gupta",
+            "email": "admin@sapnasarees.com",
+            "role": "ADMIN"
+          },
+          "timestamp": "2026-08-23T04:50:05.588Z",
+          "reason": "Initial Catalog Setup"
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-2026-8801",
+      "userId": "u_user_1",
+      "customerName": "Radhika Sharma",
+      "email": "user@sapnasarees.com",
+      "items": [
+        {
+          "sareeId": "saree_1",
+          "name": "Crimson Zari Banarasi",
+          "price": 18500,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 18500,
+      "status": "Processing",
+      "paymentMethod": "WhatsApp / Online UPI",
+      "shippingAddress": "Flat 402, Lotus Apartments, Bandra West, Mumbai, MH - 400050",
+      "trackingNumber": "EXP-IND-99824",
+      "createdAt": "2026-08-01T14:30:00.000Z"
+    },
+    {
+      "id": "ORD-2026-8802",
+      "userId": "u_user_1",
+      "customerName": "Dr. Radhika Iyer",
+      "email": "radhika.iyer@example.com",
+      "items": [
+        {
+          "sareeId": "saree_2",
+          "name": "Ivory Kanjivaram Bridal",
+          "price": 32000,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 32000,
+      "status": "Shipped",
+      "paymentMethod": "Razorpay Card",
+      "shippingAddress": "32 Indiranagar 10th Main, Bangalore, KA - 560038",
+      "trackingNumber": "DHL-IN-77123",
+      "createdAt": "2026-08-03T09:15:00.000Z"
+    }
+  ],
+  "weavers": [
+    {
+      "id": "w_1",
+      "masterName": "Pandit Rajeshwar Master Weaver",
+      "location": "Varanasi",
+      "activeLooms": 42,
+      "specialty": "Katan Silk Kadwa Zari"
+    },
+    {
+      "id": "w_2",
+      "masterName": "Kalyanasundaram Weavers Guild",
+      "location": "Kanchipuram",
+      "activeLooms": 35,
+      "specialty": "Pure Silk Korvai"
+    },
+    {
+      "id": "w_3",
+      "masterName": "Chanderi Handloom Collective",
+      "location": "Chanderi",
+      "activeLooms": 28,
+      "specialty": "Gold Zari Cotton Silk"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "customers": [
+    {
+      "id": "cust_1",
+      "name": "Radhika Sharma",
+      "email": "user@sapnasarees.com",
+      "passwordHash": "$2a$10$ZtB2tV.7/7qFv.0YmK7rMeY5cK7Z1T.5Fq7nK7rMeY5cK7Z1T.5Fq",
+      "plainPassword": "user123",
+      "role": "CUSTOMER",
+      "phone": "+91 98765 00001",
+      "addresses": [
+        "Flat 402, Lotus Apartments, Bandra West, Mumbai, MH - 400050"
+      ],
+      "wishlist": [
+        "saree_1",
+        "saree_2"
+      ],
+      "createdAt": "2026-01-15T10:00:00.000Z"
+    },
+    {
+      "id": "cust_2",
+      "name": "Dr. Radhika Iyer",
+      "email": "radhika.iyer@example.com",
+      "passwordHash": "$2a$10$ZtB2tV.7/7qFv.0YmK7rMeY5cK7Z1T.5Fq7nK7rMeY5cK7Z1T.5Fq",
+      "plainPassword": "user123",
+      "role": "CUSTOMER",
+      "phone": "+91 98765 00004",
+      "addresses": [
+        "32 Indiranagar 10th Main, Bangalore, KA - 560038"
+      ],
+      "wishlist": [
+        "saree_3"
+      ],
+      "createdAt": "2026-02-01T11:20:00.000Z"
+    },
+    {
+      "id": "cust_1787405735818",
+      "name": "Valued Customer",
+      "phoneNumber": "+919876500001",
+      "phone": "+919876500001",
+      "role": "CUSTOMER",
+      "accountStatus": "ACTIVE",
+      "wishlist": [],
+      "addresses": [],
+      "createdAt": "2026-08-22T13:35:35.818Z"
+    }
+  ]
+}

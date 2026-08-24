@@ -1,0 +1,51 @@
+/* ============================================================
+   DESIGN TOKENS — sapna-sarees/css/tokens.css
+   ============================================================ */
+:root {
+  /* ── Colour palette ── */
+  --c-bg:        #FAFAF8;
+  --c-bg-deep:   #F4F1EC;
+  --c-ink:       #18140F;
+  --c-ink-mid:   #4A3F35;
+  --c-ink-light: #8A7D72;
+  --c-gold:      #B8924A;
+  --c-gold-pale: #E8D5A3;
+  --c-line:      #E2DDD7;
+  --c-white:     #FFFFFF;
+  --c-wa:        #25D366;
+  --c-wa-hover:  #1DA851;
+
+  /* ── Typography ── */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans:  'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ── Spacing scale ── */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+  --sp-32: 8rem;
+
+  /* ── Transitions ── */
+  --ease:        cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out:    cubic-bezier(0, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:    180ms;
+  --dur-base:    280ms;
+  --dur-slow:    480ms;
+  --dur-xslow:   800ms;
+
+  /* ── Layout ── */
+  --max-w:        1140px;
+  --max-w-narrow: 700px;
+  --container-px: clamp(1.25rem, 5vw, 3rem);
+  --section-py:   clamp(4rem, 8vw, 7.5rem);
+}

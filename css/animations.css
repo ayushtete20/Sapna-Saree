@@ -1,0 +1,43 @@
+/* ============================================================
+   ANIMATIONS — sapna-sarees/css/animations.css
+   ============================================================ */
+
+/* Scroll reveal base states */
+.reveal-up,
+.reveal-right {
+  opacity: 0;
+  transition: opacity var(--dur-xslow) var(--ease-out),
+              transform var(--dur-xslow) var(--ease-out);
+}
+.reveal-up    { transform: translateY(28px); }
+.reveal-right { transform: translateX(28px); }
+
+.reveal-up.in-view,
+.reveal-right.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger for grid children */
+.collections-grid .collection-card:nth-child(2) { transition-delay: 0.06s; }
+.collections-grid .collection-card:nth-child(3) { transition-delay: 0.12s; }
+.collections-grid .collection-card:nth-child(4) { transition-delay: 0.18s; }
+.collections-grid .collection-card:nth-child(5) { transition-delay: 0.24s; }
+.collections-grid .collection-card:nth-child(6) { transition-delay: 0.30s; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up, .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* Scroll hint animation */
+@keyframes scrollBounce {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50%       { opacity: 0.8; transform: scaleY(1.5); transform-origin: top; }
+}
+.hero__scroll-line { animation: scrollBounce 2.2s var(--ease) infinite; }
