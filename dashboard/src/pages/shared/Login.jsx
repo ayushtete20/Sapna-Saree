@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
+import { STOREFRONT_URL } from '../../utils/config';
 
 export default function Login() {
   const { login, activePortalRole, setActivePortalRole } = useAuth();
@@ -354,7 +355,7 @@ export default function Login() {
 
             <div style={{ marginTop: '1rem' }}>
               <a
-                href="http://localhost:3000"
+                href={STOREFRONT_URL}
                 target="_blank"
                 rel="noreferrer"
                 style={{

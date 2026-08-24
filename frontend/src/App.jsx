@@ -8,11 +8,9 @@ import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import ProductDetail from './pages/ProductDetail';
 import { DEMO_SAREES } from './utils/demoData';
-import { DASHBOARD_URL } from './utils/config';
+import { DASHBOARD_URL, API_URL } from './utils/config';
 
 import './index.css';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 export default function App() {
   const [page, setPage] = useState('home');

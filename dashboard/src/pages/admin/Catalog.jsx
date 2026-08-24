@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
-import { API_URL } from '../../utils/config';
+import { API_URL, STOREFRONT_URL } from '../../utils/config';
 
 export default function Catalog() {
   const { user, token, isAdmin, isOwner } = useAuth();
@@ -136,7 +136,7 @@ export default function Catalog() {
         setLivePageNotification({
           id: data.saree.id,
           name: data.saree.name,
-          url: `http://localhost:3000/#product/${data.saree.id}`
+          url: `${STOREFRONT_URL}/#product/${data.saree.id}`
         });
         resetForm();
       } else {
@@ -455,7 +455,7 @@ export default function Catalog() {
 
                   {/* Direct Storefront Product Page Link */}
                   <a
-                    href={`http://localhost:3000/#product/${saree.id}`}
+                    href={`${STOREFRONT_URL}/#product/${saree.id}`}
                     target="_blank"
                     rel="noreferrer"
                     style={{

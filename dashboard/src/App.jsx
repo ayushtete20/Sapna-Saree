@@ -14,6 +14,7 @@ import Analytics from './pages/owner/Analytics';
 import Weaver from './pages/admin/Weaver';
 import Approvals from './pages/owner/Approvals';
 import Overview from './pages/shared/Overview';
+import { STOREFRONT_URL } from './utils/config';
 
 export default function App() {
   const { user, isOwner, isAdmin, isEmployee, canManageCatalog, canManageOrders, logout, loading } = useAuth();
@@ -88,7 +89,7 @@ export default function App() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <a
-              href="http://localhost:3000"
+              href={STOREFRONT_URL}
               target="_blank"
               rel="noreferrer"
               className="luxury-btn-secondary"
