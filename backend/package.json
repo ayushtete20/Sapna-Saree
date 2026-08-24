@@ -5,7 +5,12 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "node src/server.js"
+    "dev": "node src/server.js",
+    "db:push": "prisma db push",
+    "db:seed": "node src/scripts/seed.js",
+    "db:setup": "prisma db push && node src/scripts/seed.js",
+    "db:studio": "prisma studio",
+    "db:generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",

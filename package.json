@@ -8,10 +8,16 @@
     "build": "npm --prefix frontend install && npm --prefix frontend run build && npm --prefix dashboard install && npm --prefix dashboard run build",
     "build:frontend": "npm --prefix frontend install && npm --prefix frontend run build",
     "build:dashboard": "npm --prefix dashboard install && npm --prefix dashboard run build",
+    "install:all": "npm --prefix backend install && npm --prefix frontend install && npm --prefix dashboard install",
     "start": "node backend/src/server.js",
     "dev:backend": "npm --prefix backend start",
     "dev:frontend": "npm --prefix frontend start",
-    "dev:dashboard": "npm --prefix dashboard start"
+    "dev:dashboard": "npm --prefix dashboard start",
+    "db:push": "npm --prefix backend run db:push",
+    "db:seed": "npm --prefix backend run db:seed",
+    "db:setup": "npm --prefix backend run db:setup",
+    "db:studio": "npm --prefix backend run db:studio",
+    "db:generate": "npm --prefix backend run db:generate"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
