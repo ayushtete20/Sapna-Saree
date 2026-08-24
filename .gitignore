@@ -26,3 +26,12 @@ yarn-debug.log*
 yarn-error.log*
 .vscode/
 .idea/
+
+# Local documents, spreadsheets, PDFs, Prompts & raw WhatsApp images
+*.xlsx
+*.pdf
+*.docx
+Promp.txt
+WhatsApp Image*
+*.tmp
+dashboard/e-commerce-merchant-control-panel.html
