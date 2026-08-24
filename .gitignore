@@ -35,3 +35,7 @@ Promp.txt
 WhatsApp Image*
 *.tmp
 dashboard/e-commerce-merchant-control-panel.html
+
+# Local launcher scripts
+start-project.bat
+start-project.ps1
